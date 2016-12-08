@@ -3,10 +3,73 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Trivia Game</title>
+
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+	<script type="text/javascript" src="assets/javascript/app.js"></script>
 </head>
 <body>
 
-<h1>THIS IS A TRIVIA GAME!</h1>
+<div class="pageWrapper">
+
+	<h1>Dungeons and Dragons Trivia!</h1>
+
+	<div class="showTimer"></div>
+
+	<div class="game">
+
+		<p id="questionOne">Which playable class is known for its devout following of righteousness while also specialiazing in melee combat?</p>
+
+			<form>
+  				<input type="radio" name="class" value="fighter" checked> Fighter<br>
+  				<input type="radio" name="class" value="paladin"> Paladin<br>
+  				<input type="radio" name="class" value="rogue"> Rogue<br>
+  				<input type="radio" name="class" value="ranger"> Ranger
+			</form>
+
+		<p id="questionTwo">Which race does the hero Drizzt Do'urden belong to?</p>
+
+			<form>
+  				<input type="radio" name="class" value="eladrin" checked> Eladrin<br>
+  				<input type="radio" name="class" value="halfling"> Halfling<br>
+  				<input type="radio" name="class" value="human"> Human<br>
+  				<input type="radio" name="class" value="drow"> Drow
+			</form>
+
+		<p id="questionThree">What is the Vorpal quality of a weapon ususally associated with?</p>
+
+			<form>
+  				<input type="radio" name="class" value="beheading" checked> Beheading<br>
+  				<input type="radio" name="class" value="displacement"> Displacement<br>
+  				<input type="radio" name="class" value="acid"> Acid<br>
+  				<input type="radio" name="class" value="exploding"> Exploding
+			</form>
+
+		<p id="questionFour">This item contains a pocket dimension that is useful for storing a large amount of treasure.</p>
+
+			<form>
+  				<input type="radio" name="class" value="fighter" checked> Fighter<br>
+  				<input type="radio" name="class" value="paladin"> Paladin<br>
+  				<input type="radio" name="class" value="rogue"> Rogue<br>
+  				<input type="radio" name="class" value="bagOfHolding"> Bag of Holding
+			</form>
+
+		<p id="questionFive">What monster awaits its victims in the underdark and is noted for its octupus head?</p>
+
+			<form>
+  				<input type="radio" name="class" value="fighter" checked> Fighter<br>
+  				<input type="radio" name="class" value="paladin"> Paladin<br>
+  				<input type="radio" name="class" value="rogue"> Rogue<br>
+  				<input type="radio" name="class" value="ranger"> Ranger
+			</form>	
+		
+	</div>
+
+	<div class="showResults"></div>
+
+</div>
 	
 </body>
 </html>
