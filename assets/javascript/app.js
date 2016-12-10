@@ -1,41 +1,58 @@
+$('document').ready(function(){
+
 var answersCorrect = 0
 var answersWrong = 0
 var timer = 121
 var counter
 
+$("input[name='question1']").change(function(){
+			var answer = $("input[name='question1']:checked").val();
+			if (answer == "paladin"){
+				console.log("correct");
+			} else {
+				console.log("incorrect");
+			}
+		});
+
 // This funtion will run the entire game on page load.
-// function runGame() {
+function runGame() {
 
-// 	// The following two functions run the timer and end the game if time runs out.
-// 	function countdown() {
-// 		counter = setInterval(decrement, 1000);
-// 	}
+	// The following two functions run the timer and end the game if time runs out.
+	function countdown() {
+		counter = setInterval(decrement, 1000);
+	}
 		
-// 	function decrement() {
-// 		timer--;
-// 		$(".showTimer").html("<h2>" + timer + " Seconds Left</h2>");
-// 		if (timer === 0) {
-// 			clearInterval(counter);
-// 			$(".game").html("Time is up! Here are your results:");
-// 			$(".showResults").html("<h2>Answers Correct: " + answersCorrect + "</h2><h2>Answers Wrong: " + answersWrong + "</h2>");
-// 		}
-// 	}
+	function decrement() {
+		timer--;
+		$(".showTimer").html("<h2>" + timer + " Seconds Left</h2>");
+		if (timer === 0) {
+			results();
+			}
+	}
 
-// 	countdown();
+countdown();
 
-	// I need to write out what will happen when the submit button is pressed, many things will happen at once. 
-	$("#submit").click(function(){
+	function results(){
+		clearInterval(counter);
+		$(".game").html("Answers submitted! Let's see how you did.");
+		$(".showResults").html("<h2>Answers Correct: " + answersCorrect + "</h2><h2>Answers Wrong: " + answersWrong + "</h2>");
+	};
 
-		alert("Button Clicked!");
-		// if ($("#questionOne").val() == "fighter") {
-		// 	answersCorrect++;
-		// } else {
-		// 	answersWrong++;
-		// }
-	});
+};
 
-}
 
-// runGame();
+runGame();
+
+
+// $("#submit").on("click", function(){
+// 	$( "input[name='question1']").change(function(){
+// 		var answer = $( "input[name='question1']:checked" ).val();
+// 			console.log(answer);
+// 	});
+// 	results();
+// });	
+
+});
+
 	
 
