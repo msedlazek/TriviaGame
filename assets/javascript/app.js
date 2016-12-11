@@ -16,11 +16,16 @@ function countdown() {
 		
 function decrement() {
 	timer--;
-	$(".showTimer").html("<h2>" + timer + " Seconds Left</h2>");
+	$(".showTimer").html(timer + " Seconds Left");
 	if (timer === 0) {
 		results();
 		$(".game").html("Time is up! Let's see how you did.");
 		$(".showResults").html("<h2>Answers Correct: " + answersCorrect + "</h2><h2>Answers Wrong: " + answersWrong + "</h2>");
+		if (answersCorrect >= 4){
+			$(".showResults").append("<h2>Well done Adventurer!</h2>");
+		} else {
+			$(".showResults").append("<h2>You'll be Dragon food soon!</h2>");
+		};
 		}
 };
 
@@ -30,6 +35,11 @@ $("#submit").on("click", function(){
 	results();
 	$(".game").html("Answers submitted! Let's see how you did.");
 	$(".showResults").html("<h2>Answers Correct: " + answersCorrect + "</h2><h2>Answers Wrong: " + answersWrong + "</h2>");
+	if (answersCorrect >= 4){
+			$(".showResults").append("<h2>Well done Adventurer!</h2>");
+		} else {
+			$(".showResults").append("<h2>You'll be Dragon food soon!</h2>");
+		};
 });
 
 function results(){
