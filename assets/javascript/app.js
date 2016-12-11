@@ -26,7 +26,7 @@ function decrement() {
 		} else {
 			$(".showResults").append("<h2>You'll be Dragon food soon!</h2>");
 		};
-		}
+	}
 };
 
 countdown();
